@@ -1,3 +1,3 @@
 # coursera_test
-Coursera test repository for html, js and css\n
+Coursera test repository for html, js and css <br>
 ReadMe file in gh-pages

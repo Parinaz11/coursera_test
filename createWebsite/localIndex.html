@@ -4,24 +4,120 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title> My Website hohoho </title>
+	<style type="text/css">
+		p, .green {
+			color: darkcyan;
+			font-size: 20px;
+			width: 200px;
+		}
+		h1 {
+			color: darkgreen;
+			font-size: 36px;
+			text-align: center;
+			font-weight: bold;
+			opacity: .6;
+		}
+
+		#QuoteTwo {
+			color: red;
+			font-style: italic;
+			font-weight: bold;
+		}
+
+		#QuoteTwo:hover p{
+			color: white;
+			background-color: darkslateblue;
+		}
+
+		#topOfPage {
+			font-style: italic;
+			background-color: lightcyan;
+		}
+		/*It means for the header tags with class="gree"*/
+		header.green {
+			text-align: center;
+		}
+		/*Targets every li direct child of an ol tag*/
+		ol > li {
+			font-weight: bold;
+			color: darkred;
+		}
+		/*Targets every div that is not necessarily direct child of footer*/
+		footer div{
+			color: orange;
+		}
+		ol ul {
+			color: gray;
+		}
+		div > ol > li > ul > li {
+			list-style: none;
+		}
+		a:link, a:visited {
+			text-decoration: none;
+			background-color: lightpink;
+			font-weight: bold;
+			border: : 1px solid blue;
+			color: darkblue;
+			display: block;
+			width: 200px;
+			text-align: center;
+			margin-bottom: 1px;
+		}
+		a:hover, a:active {
+			background-color: darkblue;
+			color: yellow;
+			cursor: pointer;
+		}
+
+		footer > a:hover {
+			background-color: darkred;
+			color: white;
+		}
+		section:nth-child(odd){
+			background-color: lightgray;
+			width: 200px;
+		}
+
+		section:nth-child(odd):hover{
+			background-color: black;
+			color: lightyellow;
+		}
+		#myParID {
+			color: black;
+			font-size: small;
+		}
+
+	</style>
 </head>
 <body>
-	<header>
+	<header class="green">
 		Like this is supposed to be the main header
 	</header>
-	<h1>Welcome to my first website :) </h1>
-	<h2>By the end of the course it's gonna be looking much better. You know it ;p</h2>
+	<h1 id="topOfPage">Welcome to my first website :) </h1>
+	<!-- &nbsp; (space) is for when you don't want the words to go to the other line even though you make the page smaller -->
+	<h2>By the end of the course it's gonna be looking much better. &nbsp;You&nbsp;know&nbsp;it&nbsp; ;p</h2> 
 	<div> Some content here </div>
 	<span> Span content</span>
 	<div> Other div elements here <span>*A span* </span> haha</div>
+	<a href="localIndex.html" title="Link to same directory"> 1. Linking to a file in the same directory </a> <br>
+	<a href="https://data.typeracer.com/misc/badge?user=parinaz11" target="_blank" title="Link to TypeRacer status">
+	<div>Um this is a div in the a tag </div> 2. TypeRacer Status</a> <br>
+	<a href="https://github.com/jhu-ep-coursera/fullstack-course4" target="_blank" title="HTML Examples"> 3. HTML Codes in Lecture</a> <br>
+	<h4> Section links: </h4>
+	<ul>
+		<li><a href="#Quote One"> go to quot one</a></li>
+		<li><a href="#Quote Two"> click here for quote two</a></li>
+	</ul>
 	<section>
-		Section1
+		Section with articles
 		<article>Article 1</article>
 		<article>Article 2</article>
 	</section>
 	<aside>Information related to the page but as side</aside>
+
 	<div>
-		Colors:
+		<!-- use &quot; for representation other than utf-8 so that the " " characters wouldn't be messed up -->
+		Colors: 
 		<ol>
 			<li>blue</li>
 			<li>red</li>
@@ -34,16 +130,33 @@
 				</ul>
 			</li>
 		</ol>
-		
-		
 	</div>
+	<h3>Images:</h3>
+	<p><img src="penguins.jfif" width="500" height="287" alt="Penguin picture with quot" ><p>&quot;Penuins are fun&quot;</p></p>
+	<p><img src="Norma.jfif" width="660" height="368" alt="Image2">
+		<p>Just enjoy.</p>
+	</p>
+	<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzlcVo510l-fdWrsxhvqZHAvoc9KmzDBXeUA&usqp=CAU" width="530" height="550" alt="Zoro"><p>Zorooo hegh 🥲</p></p>
+	
+	<section id="Quote One">
+		<h3> Quote 1: </h3>
+		<p> &quot;It used to make you so happy, the water. I think it's brave to try to be happy. You've gotten so comfortable being unhappy. Wouldn't it be wonderful to wake up in the morning and choose to be happy, to let the water wash everything away?&quot;</p>
+		<footer>Dumb, by Nirvana (song) </footer>
+	</section>
+	<section id="QuoteTwo">
+		<h3> Quote 2: </h3>
+		<p>&quot;How can you tell me that you're lonely and say for you that the sun don't shine? Let me take you by the hand and lead you through the streets of London. I'll show you something to make you change your mind.&quot;</p>
+		<footer>the streets of london, by ralph mcTell</footer>
+	</section>
 	<footer>
 		<hr>
 		Email: parinaz.akef@gmail.com
+		<div> Prinaz Akef 2023 &copy; Copyright </div>
+		<a href="#topOfPage"> Back To Top</a>
 	</footer>
 	<p id = "myParID">
 		This is supposed to be a pargraph. <br>
-		so um.. yeah changinggg yesss
+		so um.. yeah&amp;
 	</p>
 </body>
 </html>
